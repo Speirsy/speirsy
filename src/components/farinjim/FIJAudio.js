@@ -4,7 +4,7 @@ const FIJAudio = () => {
 
   return (
     <>
-    <h1>FIJ Audio : ksdhfsdhf</h1>
+    <h1>FIJ Audio</h1>
     </>
   );
 };

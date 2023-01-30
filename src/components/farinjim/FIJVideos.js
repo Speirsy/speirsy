@@ -6,7 +6,7 @@ const FIJVideos = () => {
     <>
     <h1>FIJ Videos</h1>
     </>
-  )
-}
+  );
+};
 
 export default FIJVideos;
