@@ -6,9 +6,9 @@ const SongsHome = () => {
     return (
         <>
         <h1>$5000 Songs</h1>
-        <Link to=''>Front Page</Link>;
-        <Link to='$5000_songs_2'>$5000 Songs Page 2</Link>;
-        <Link to='$5000_songs_3'>$5000 Songs Page 3</Link>;
+        <Link to=''>Front Page</Link>
+        <Link to='$5000_songs_2'> Page 2</Link>
+        <Link to='$5000_songs_3'> Page 3</Link>
         <Outlet />
 
         <div>
