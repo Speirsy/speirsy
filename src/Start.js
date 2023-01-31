@@ -5,9 +5,9 @@ const Start = () => {
     return (
         <>
         <div className='start-nav'>
-            <Link to='/farinjim'> Far In Jim </Link>;
+            <Link to='/farinjim'> Far In Jim </Link>
             <Link to='/songs5000'> Songs 5000 </Link>
-            <Link to='/speirsybass'> Bass </Link>
+            <Link to='/speirsybass'> Speirsy Bass </Link>
             
         </div>
         </>
