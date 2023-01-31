@@ -26,9 +26,12 @@ function App() {
             
           <Route path="FaRiNjIm" element={<FIJHome/>} >
             <Route index element={<FIJHello />} />
+
             {/* I'm not really sure what's happening here with the index. Or why we need 2 home pages.
-            Is that what we have. It sort of seems like it. No. It's not. What you have is a kind of
+            Is that what we have. It sort of seems like it?
+            No. It's not. What you have is a kind of
             FIJApp.js ? Andy?  */}
+            
             <Route path="FIJAudio" element={<FIJAudio />} />
             <Route path="FIJVideos" element={<FIJLook />} />
           </Route>  
