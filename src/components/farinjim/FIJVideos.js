@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FIJVideos = () => {
+const FIJLook = () => {
 
   return (
     <>
@@ -9,4 +9,4 @@ const FIJVideos = () => {
   );
 };
 
-export default FIJVideos;
+export default FIJLook;

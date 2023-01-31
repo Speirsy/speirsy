@@ -10,8 +10,8 @@ const SongsHome = () => {
         </div>
         <h1>$5000 Songs</h1>
         <Link to=''>Home Page</Link>
-        <Link to='$5000_songs_2'> Page 2</Link>
-        <Link to='$5000_songs_3'> Page 3</Link>
+        <Link to='sOnGsPageA'> Page 2</Link>
+        <Link to='sOnGsPageB'> Page 3</Link>
         <Outlet />
         
         </>

@@ -5,13 +5,13 @@ const FIJHome = () => {
 
     return (
         <>
-        <div>
+        {/* <div>
             <Link to='/'>START</Link>
-        </div>
+        </div> */}
         <h1>Far In Jim </h1>
         <Link to=''>FIJ Front</Link>
-        <Link to='FIJVideos'>FIJ Vids</Link>
-        <Link to='FIJAudio'>FIJ Funk</Link>
+        <Link to='FIJVideos'> FIJ Watch </Link>
+        <Link to='FIJAudio'> FIJ Funk </Link>
         <Outlet  />
         
         </>
