@@ -12,7 +12,7 @@ const FIJHome = () => {
         <Link to=''>FIJ Front</Link>
         <Link to='FIJVideos'> FIJ Watch </Link>
         <Link to='FIJAudio'> FIJ Funk </Link>
-        <Outlet  />
+        {/* <Outlet  /> */}
         
         </>
     );
