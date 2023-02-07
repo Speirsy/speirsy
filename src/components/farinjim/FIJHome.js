@@ -8,7 +8,7 @@ const FIJHome = () => {
         <div>
             <Link to='/'>START</Link>
         </div>
-        <h1>Far In Jim </h1>
+        {/* <h1>Far In Jim </h1> */}
         <Link to=''>FIJ Hello</Link>
         <Link to='FIJVideos'> FIJ Watch </Link>
         <Link to='FIJAudio'> FIJ Funk </Link>

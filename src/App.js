@@ -1,5 +1,6 @@
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Start from './Start';
 import FIJHome from './components/farinjim/FIJHome';
 import FIJHello from './components/farinjim/FIJHello';
@@ -31,7 +32,7 @@ function App() {
             Is that what we have. It sort of seems like it?
             No. It's not. What you have is a kind of
             FIJApp.js ? Andy?  */}
-            
+
             <Route path="FIJAudio" element={<FIJAudio />} />
             <Route path="FIJVideos" element={<FIJLook />} />
           </Route>  
