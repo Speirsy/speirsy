@@ -1,0 +1,16 @@
+.main-image {
+    background-image: url("FIJimages/FIJ_Profile_Pic.png");
+    background-size:cover;
+    background-position: 0%;
+}
+
+.Title {
+    text-align: center ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(122, 122, 179)
+};
+
+.para {
+    padding-right: 30%;
+    padding-left: 30% ;
+}

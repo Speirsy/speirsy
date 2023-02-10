@@ -5,6 +5,7 @@ const FIJHome = () => {
 
     return (
         <>
+        <body className={"main-image"}>
         <div>
             <Link to='/'>START</Link>
         </div>
@@ -13,7 +14,7 @@ const FIJHome = () => {
         <Link to='FIJVideos'> FIJ Watch </Link>
         <Link to='FIJAudio'> FIJ Funk </Link>
         <Outlet  />
-        
+          </body>
         </>
     );
 };
