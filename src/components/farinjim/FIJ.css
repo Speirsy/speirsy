@@ -1,12 +1,32 @@
+* {
+    box-sizing: border-box;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif}:
+
+
+.nav {  
+    
+    text-align: center ;
+    padding: 50px; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:large;
+    color: rgb(122, 122, 179)
+    
+}
+
+.hover {font-size:larger;
+    color: rgb(49, 178, 96)}
+
 .main-image {
     background-image: url("FIJimages/FIJ_Profile_Pic.png");
+    height: 100%;
     background-size:cover;
     background-position: 0%;
 }
 
-.Title {
+.title {
     text-align: center ;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:xx-large;
     color: rgb(122, 122, 179)
 };
 
@@ -14,3 +34,4 @@
     padding-right: 30%;
     padding-left: 30% ;
 }
+

@@ -5,16 +5,21 @@ const FIJHome = () => {
 
     return (
         <>
+        <head>
+            <title>FIJ | About</title>
+        </head>
         <body className={"main-image"}>
-        <div>
-            <Link to='/'>START</Link>
-        </div>
-        {/* <h1>Far In Jim </h1> */}
-        <Link to=''>FIJ Hello</Link>
-        <Link to='FIJVideos'> FIJ Watch </Link>
-        <Link to='FIJAudio'> FIJ Funk </Link>
-        <Outlet  />
-          </body>
+            {/* <header> 
+            </header> */}
+                <nav className={"nav hover"}>
+                    <Link to='/'>START</Link>
+                    <Link to=''>FIJ Hello</Link>
+                    <Link to='FIJVideos'> FIJ Watch </Link>
+                    <Link to='FIJAudio'> FIJ Funk </Link>
+                    
+                </nav>
+                <Outlet  />
+         </body>
         </>
     );
 };

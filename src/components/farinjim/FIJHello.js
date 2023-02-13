@@ -5,9 +5,19 @@ const FIJHello = () => {
 
   return (
     <>
+    {/* <head>
+      <title className={"title"}>  Far In Jim</title>
+
+    </head> */}
     
     <body>
-    <h1 className={"Title"}>  Far In Jim</h1>
+      <header 
+        className={"title"}> Far In Jim 
+
+      </header>
+
+
+    
     <p className={"para"}>
       My mum says this building website is a waste of time and no one will visit it because my songs aren't very good. 
       But I don't believe her. "Hey There Andy Murray" got thousands of views in 2013 which is like a million in today's money, and some people come back and watch it sometimes. And it was in the papers. So it is a good song. 
