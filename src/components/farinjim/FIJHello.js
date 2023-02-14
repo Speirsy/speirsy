@@ -10,7 +10,9 @@ const FIJHello = () => {
         className={"title"}> Far In Jim 
       </header>
     <section>
-      <p className={"flexbox-container flexbox-item-1"}>
+      {/* see how flexbox classes are assigned. see web dev simplified flexbox in 15 minutes */}
+      <div className={"flexbox-container"}> 
+      <p className={"flexbox-item flexbox-item-1"}>
 
       My mum says this building website is a waste of time and no one will visit it because my songs aren't very good. 
       But I don't believe her. <a href='https://www.youtube.com/watch?v=0hBAQuQVxEY'>"Hey There Andy Murray"</a> got thousands of views in 2013 which is like a million in today's money, and some people come back and watch it sometimes. And it was in the papers. So it is a good song. 
@@ -19,6 +21,7 @@ const FIJHello = () => {
       But I don't care what she thinks anymore. I'm going to keep doing it anyway. 
 
       </p>
+      </div>
     </section>
     <footer>
       <h3>Far In Jim
