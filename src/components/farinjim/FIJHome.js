@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import './FIJ.css';
+
 
 const FIJHome = () => {
 
@@ -9,15 +11,17 @@ const FIJHome = () => {
             <title>FIJ | About</title>
         </head>
         <body className={"main-image"}>
-            {/* <header> 
-            </header> */}
-                <nav className={"nav hover"}>
-                    <Link to='/'>START</Link>
+            <header>
+                <nav className={"nav"} >
+                    <ul >
+                    <Link to='/'>  START</Link>
                     <Link to=''>FIJ Hello</Link>
-                    <Link to='FIJVideos'> FIJ Watch </Link>
-                    <Link to='FIJAudio'> FIJ Funk </Link>
-                    
+                    <Link to='FIJVideos'>FIJ Watch</Link>
+                    <Link to='FIJAudio'>FIJ Funk</Link>
+                    </ul>
                 </nav>
+            </header>
+                <hr />
                 <Outlet  />
          </body>
         </>

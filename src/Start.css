@@ -2,13 +2,14 @@
     text-align: left;
   }
 
-  
+/* a {text-decoration: none;} */
 
-.Start-nav {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.start-nav {
+    font-family: 'Impact', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display:block;
     color: antiquewhite;
     background-color: #fca315;
+    /* background-color: #d9d6d1; */
     min-height: 100vh;
     text-align:center ;
     display: flex;
@@ -16,13 +17,10 @@
     align-items: center;
     justify-content:space-evenly;
     font-size: calc(50px + 2vmin);
+  }
 
-    
-}
+.start-nav a {text-decoration: none;}
 
-.Test {
-    text-shadow: black;
-}
   
   .App-logo {
     height: 40vmin;
