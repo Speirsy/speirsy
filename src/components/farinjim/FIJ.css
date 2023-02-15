@@ -1,5 +1,5 @@
-/* * { box-sizing: border-box}; */
-    /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif}; */
+* { box-sizing: border-box;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif};
 
 /* .body { background-color: crimson}; */
 
@@ -7,11 +7,13 @@
 .flexbox-container {display: flex;}
 
 .flexbox-item {width: 80%;
-                padding: 50px;
-                margin:10px;
-                border-width: thin ;
+                padding: 30px;
+                border: 20px black;
+                margin:20px;
 }
-.flexbox-item-1 {min-height: 300px ;
+.flexbox-item-1 {font-size: large;
+    min-height: 300px ;
+                background-color: white;
 }
 
 .nav {  
@@ -33,11 +35,13 @@ nav a {text-decoration: none;}
 
 
 .main-image {
-    background-image: url("FIJimages/FIJ_Profile_Pic.png");
+    background-image: url("FIJimages/FIJ_Scanned.jpg");
+    background-color: antiquewhite;
+    
     
     background-size:cover;
     height: 100%;
-    background-position: 0%;
+    background-position:50%;
 }
 
 .title {
