@@ -37,8 +37,7 @@ nav a {text-decoration: none;}
 .main-image {
     background-image: url("FIJimages/FIJ_Scanned.jpg");
     background-color: antiquewhite;
-    
-    
+    background-blend-mode: multiply;
     background-size:cover;
     height: 100%;
     background-position:50%;
