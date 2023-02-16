@@ -6,13 +6,12 @@
 
 .start-nav {
     font-family: 'Impact', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display:block;
+    display:flex;
     color: antiquewhite;
     background-color: #fca315;
     /* background-color: #d9d6d1; */
     min-height: 100vh;
     text-align:center ;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content:space-evenly;
@@ -20,6 +19,8 @@
   }
 
 .start-nav a {text-decoration: none;}
+
+.space {padding-left: 20px;}
 
   
   .App-logo {

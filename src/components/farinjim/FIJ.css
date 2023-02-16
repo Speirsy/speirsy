@@ -1,33 +1,50 @@
 * { box-sizing: border-box;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif};
+
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Arial Narrow Bold', sans-serif
+    
+};
 
 /* .body { background-color: crimson}; */
 
 
+
 .flexbox-container {display: flex;}
 
-.flexbox-item {width: 80%;
-                padding: 30px;
-                border: 20px black;
-                margin:20px;
+.flexbox-item {
+
+                width: 70%;
+                padding: 5px;
+                border: .3em solid rgb(79, 77, 77);
+                margin:auto;
+                font-size: 1.4em;
+                font-weight:lighter ;
+
 }
-.flexbox-item-1 {font-size: large;
-    min-height: 300px ;
-                background-color: white;
+.flexbox-item-1 {
+                /* -webkit-text-stroke-width: 0%;
+                -webkit-text-stroke-color: antiquewhite; */
+                justify-content: center;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-align: center;
+                /* min-height: 100vh ; */
+            
+                background:rgba(255, 255, 255, 0.8);
+
 }
 
-.nav {  
-
-    text-align: center ;
-    padding: 10px; 
-    font-family: Impact,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size:large;
-    color: rgb(122, 122, 179);
-
+.nav {    
+    display: flex;
+    /* position: fixed; */
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     
 }
 
 nav a {text-decoration: none;}
+
+.space {padding-left: 10px;}
 
 
 
@@ -36,32 +53,31 @@ nav a {text-decoration: none;}
 
 .main-image {
     background-image: url("FIJimages/FIJ_Scanned.jpg");
-    background-color: antiquewhite;
-    background-blend-mode: multiply;
+    background-color:rgb(255, 255, 255);
+    background-blend-mode:multiply;
     background-size:cover;
-    height: 100%;
-    background-position:50%;
+    min-height: 100vh;
+
 }
+
 
 .title {
+    display: flex;
+    padding-bottom: 30px;
+    justify-content: center;
     text-align: center ;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size:xx-large;
-    color: rgb(122, 122, 179)
+    font-family: Raleway;
+    font-size:110px;
+    color: hsl(0, 97%, 54%);
 };
 
-.para {
-    padding-right: 30%;
-    padding-left: 30% ;
-}
-/* 
-.box {height: 100;
-     width: 100;
-        padding: 20;
-        margin: 50;
-        border: 5px solid black;} */
 
-p {height: 100;
-    width: 100;
-       padding: 20;
-       margin: 50;}        
+
+
+
+
+
+
+
+
+

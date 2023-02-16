@@ -10,14 +10,21 @@ const FIJHome = () => {
         <head>
             <title>FIJ | About</title>
         </head>
-        <body className={"main-image"}>
+        <body>
             <header>
-                <nav className={"nav"} >
+                <nav className="nav" >
                     <ul >
-                    <Link to='/'>  START</Link>
-                    <Link to=''>FIJ Hello</Link>
-                    <Link to='FIJVideos'>FIJ Watch</Link>
-                    <Link to='FIJAudio'>FIJ Funk</Link>
+                    <Link to='/' className='space'>START</Link>
+                    <Link to='' className='space'>FIJ Hello</Link>
+                    <Link to='FIJVideos' className='space'>FIJ Watch</Link>
+                    <Link to='FIJAudio' className='space'>FIJ Funk</Link>
+                    {/* <Link to='/' >START</Link>
+                    <Link to='' >FIJ Hello</Link>
+                    <Link to='FIJVideos' >FIJ Watch</Link>
+                    <Link to='FIJAudio' >FIJ Funk</Link> */}
+
+
+
                     </ul>
                 </nav>
             </header>
