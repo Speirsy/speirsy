@@ -32,6 +32,12 @@
 
 }
 
+.flexbox-item-2 {
+
+    justify-content: left;
+    
+}
+
 .nav {    
     display: flex;
     /* position: fixed; */
