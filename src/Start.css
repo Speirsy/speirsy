@@ -4,6 +4,8 @@
 
 /* a {text-decoration: none;} */
 
+
+
 .start-nav {
     font-family: 'Impact', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display:flex;
@@ -19,6 +21,12 @@
   }
 
 .start-nav a {text-decoration: none;}
+
+.FIJ-banner-temp {
+  display: flexbox;
+
+  content: url("start_images/FIJ_Title_2.png");
+}
 
 .space {padding-left: 20px;}
 

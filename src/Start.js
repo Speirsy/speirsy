@@ -7,7 +7,7 @@ const Start = () => {
         <>
         <div className={"start-nav"}>
         
-            <Link to='/farinjim' > Far In Jim </Link>
+            <Link to='/farinjim' className="FIJ-banner-temp"> FIJ </Link>
             <Link to='/songs5000' >Songs 5000 </Link>
             <Link to='/speirsybass' > Speirsy Bass </Link>
             

@@ -1,0 +1,35 @@
+.videos-header {
+    background-color: hsl(69,100%,50%,.9);
+
+    /* I like this hsl business. Hue(colour 0 - 360 (full spectrum), Saturation, Lightness with 50% being neutral in the middle
+    It's cool cause cpolours are more easily adjusted. It's not working here and seems to be invalid for some reason*/
+    text-align: center;
+}
+
+
+.video-container {display: flex;}
+
+.video-item {
+        
+                width: 50%;
+                padding: 5px;
+                border: .1em solid rgb(79, 77, 77);
+                margin:auto;
+                
+
+}
+
+.video-item-1 {
+
+                justify-content: center;
+        
+
+}
+
+.video-item-2 {
+
+    justify-content: left;
+    width:30%; 
+    height:auto ;
+    
+}
