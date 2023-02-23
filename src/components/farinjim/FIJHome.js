@@ -22,9 +22,6 @@ const FIJHome = () => {
                     <Link to='' >FIJ Hello</Link>
                     <Link to='FIJVideos' >FIJ Watch</Link>
                     <Link to='FIJAudio' >FIJ Funk</Link> */}
-
-
-
                     </ul>
                 </nav>
             </header>
