@@ -1,9 +1,8 @@
 
 import React, {useState, useEffect} from 'react';
-// import './FIJ.css';
 import './FIJVideos.css';
-import { getVideos } from '../../firebase';
-import { getSpeirsyVideos } from '../../firebase';
+import { getVideos } from '../../repository';
+import { getSpeirsyVideos } from '../../repository';
 
 
 const FIJLook = () => {
