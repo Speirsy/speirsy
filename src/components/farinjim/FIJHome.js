@@ -7,10 +7,10 @@ const FIJHome = () => {
 
     return (
         <>
-        <head>
+        
             <title>FIJ | About</title>
-        </head>
-        <body>
+        
+        
             <header>
                 <nav className="nav" >
                     <ul >
@@ -27,7 +27,7 @@ const FIJHome = () => {
             </header>
                 <hr />
                 <Outlet  />
-         </body>
+        
         </>
     );
 };

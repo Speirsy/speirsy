@@ -6,7 +6,7 @@ const FIJHello = () => {
 
   return (
     <>
-    <body>
+    
       <div className="main-image">
       <header> 
         <div className="title">Far In Jim
@@ -26,10 +26,6 @@ const FIJHello = () => {
         </p>
 
       </div>
-    <div>
-      <h1>HTAM</h1>
-      <iframe className="flexbox-container flexbox-item flexbox-item-2 " width="560" height="315" src="https://www.youtube.com/embed/0hBAQuQVxEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
     </section>
     </div>
     <footer>
@@ -38,7 +34,7 @@ const FIJHello = () => {
       </h3>
         
     </footer>
-    </body>
+    
     </>
   );
 };

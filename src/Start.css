@@ -24,8 +24,11 @@
 
 .FIJ-banner-temp {
   display: flexbox;
-
   content: url("start_images/FIJ_Rainbow_1.png");
+  
+}
+.FIJ-banner-temp:hover {
+  background-color: hsl(0, 0%, 0%);
 }
 
 .space {padding-left: 20px;}
