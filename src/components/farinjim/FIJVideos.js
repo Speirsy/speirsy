@@ -28,8 +28,8 @@ useEffect(() => {
     <h3>{songItem.name}</h3>
     <h4>{songItem.year}</h4>
   <iframe 
-  // className="video-container video-item video-item-2 " 
-  width="400" height="285" 
+   
+  width="400" height="285" className="video-item "
   src={songItem.url} 
   title="YouTube video player" frameBorder="0" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen>     

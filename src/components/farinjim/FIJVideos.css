@@ -11,7 +11,7 @@
 
 .video-item {
         
-                width: 50%;
+                align-items: center;
                 padding: 5px;
                 border: .1em solid rgb(79, 77, 77);
                 margin:auto;
@@ -35,7 +35,10 @@
 }
 
 ul {
+    background-color:antiquewhite;
+    align-items: center;
     display: flex;
-    flex-direction: row;
+    flex-direction:column;
     flex-wrap: wrap;
 }
+
