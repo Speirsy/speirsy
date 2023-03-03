@@ -3,7 +3,7 @@
 This website highlights my creative endeavours as an artist and musician. It is divided into three distinct sections to separate my varied work. 
 * Far In Jim - A portfolio of videos and music under the alter ego Far In Jim. 
 * 5000$ Songs - Art project where recorded song artefacts sell only as NFTs.
-* Speirsy bass - A blog featuring my wide-ranging work as a session bass player and producer. 
+* Speirsy bass - A blog featuring my wide-ranging work as a session bass player, producer and software developer.  
 
 
 
