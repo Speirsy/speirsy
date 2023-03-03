@@ -1,11 +1,58 @@
-# Far In Jim Website
+# Far In Jim / Speirsy Portfolio Website
 
-This website highlights my creative endeavours as an artist and musician. It is divided into three distinct sections to separate my varied work. 
-* Far In Jim - A portfolio of videos and music under the alter ego Far In Jim. 
-* 5000$ Songs - Art project where recorded song artefacts sell only as NFTs.
+This website https://far-in-jim.firebaseapp.com/ showcases my creative endeavours as an artist and musician. It is divided into three distinct sections to separate my varied work. 
+* Far In Jim - A portfolio of videos and music, produced under the alter ego Far In Jim. 
+* 5000$ Songs - An NFT Art project where analogue,recorded songs sell only as physical artefacts.
 * Speirsy bass - A blog featuring my wide-ranging work as a session bass player, producer and software developer.  
 
+The website is built using Javascript and React Router, and uses Firebase/Firestore as the database to store data about the music videos available on the website.
 
+
+Getting Started
+To get started with the Far In Jim Music Website, you'll need to have Node.js and NPM installed on your computer. You can download and install these tools from the official Node.js website.
+
+Once you have Node.js and NPM installed, you can clone the repository for the Far In Jim Music Website and install the required dependencies using the following commands:
+<!-- 
+bash
+Copy code
+git clone https://github.com/your-username/farinjimmusic.git
+cd farinjimmusic
+npm install
+After the dependencies have been installed, you can start the development server using the following command:
+
+sql
+Copy code
+npm start
+This will start the development server on your computer and open the website in your default browser. You can now explore the website and watch music videos from Far In Jim! -->
+
+Features
+The Far In Jim Music Website has the following features:
+* Far In Jim
+A home page with a fictional into about Far In Jim.
+A video page that displays all the available music videos from Far In Jim and Speirsy.
+A thru page to feature each video individually with additional info and back story.
+* 5000$ Songs
+A home page introducing the product - a sealed playback device containing an original song. 
+The Home page also link externally to an NFT purchase site where the product can be ordered.
+Home page also displays an up to date cost of the product in Ethereum. 
+* Speirsy Bass
+Home page introducing myself, John Paul Speirs, a bass player of note in Scotland.  
+Blog Page with bass and creativity related posts, often video. 
+Gig info page.
+Discography page.
+
+
+The Far In Jim Music Website was built using the following technologies:
+
+Javascript
+React Router
+Firebase/Firestore
+Contributing
+
+If you'd like to contribute to the Far In Jim Music Website, you can fork the repository, make changes to the code, and submit a pull request. We welcome contributions from the community and appreciate any help that you can offer!
+
+License
+The Far In Jim Music Website is licensed under the MIT License. You can find more information about this license in the LICENSE file.
 
 # Getting Started with Create React App
 
