@@ -28,7 +28,7 @@ This will start the development server on your computer and open the website in 
 Features
 The Far In Jim Music Website has the following features:
 * Far In Jim
-A home page with a fictional into about Far In Jim.
+A home page with a fictional intro about Far In Jim.
 A video page that displays all the available music videos from Far In Jim and Speirsy.
 A thru page to feature each video individually with additional info and back story.
 * 5000$ Songs
