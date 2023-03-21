@@ -14,6 +14,11 @@ useEffect(() => {
   .then(data => setVideos(data))  //sets our state in the component
 },[]);
 
+
+// Below is just repeating the above. If I want to render speirsy videos I should give the 
+// entries? in the database collections and new attribute of artist (farinjim or Speirsy) and set up a 
+// if statement in order to extract the desired videos. Or something
+
 const [speirsyVideos, setSpeirsyVideos] = useState([]);
 
 useEffect(() => {
@@ -28,7 +33,7 @@ useEffect(() => {
     <h3>{songItem.name}</h3>
     <h4>{songItem.year}</h4>
   <iframe 
-   
+// this iframe business is a somewhat hardcoded soulution  and needs sorting out. 
   width="400" height="285" className="video-item "
   src={songItem.url} 
   title="YouTube video player" frameBorder="0" 
