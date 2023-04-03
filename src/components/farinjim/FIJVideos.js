@@ -19,6 +19,8 @@ useEffect(() => {
 // entries? in the database collections and new attribute of artist (farinjim or Speirsy) and set up a 
 // if statement in order to extract the desired videos. Or something
 
+// additional note to check git push
+
 const [speirsyVideos, setSpeirsyVideos] = useState([]);
 
 useEffect(() => {
