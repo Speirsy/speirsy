@@ -55,19 +55,31 @@ nav a {text-decoration: none;}
 
 
 
-
-
-
 .main-image {
-    background-image: url("FIJimages/FIJ_Scanned.jpg");
-    background-color:rgb(255, 255, 255);  
-    
-    background-blend-mode:multiply;
-    /* opacity: .95; */
-    background-size:cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
     min-height: 100vh;
+    z-index: 1;
+  }
+  
+  .main-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    background-image: url("FIJimages/FIJ_Scanned.jpg");
+    background-size: cover;
+    z-index: -1;
+  }
 
-}
+
 
 
 .title {
