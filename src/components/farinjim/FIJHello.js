@@ -43,4 +43,3 @@ const FIJHello = () => {
 
 export default FIJHello;
 
-<iframe width="971" height="546" src="https://www.youtube.com/embed/mQpxV_Fhhjg" title="Scottish Council Elections 5th May 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

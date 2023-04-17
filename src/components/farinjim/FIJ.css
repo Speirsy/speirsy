@@ -31,6 +31,7 @@
 
 }
 
+
 .flexbox-item-2 {
 
     justify-content: left;
@@ -60,6 +61,7 @@ nav a {text-decoration: none;}
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 100vh;
     background-color: #fff;
     min-height: 100vh;
@@ -79,18 +81,24 @@ nav a {text-decoration: none;}
     z-index: -1;
   }
 
-
-
-
-.title {
+/* .title {
     display: flex;
     padding-bottom: 30px;
     justify-content: center;
     text-align: center ;
     font-family: Raleway;
     font-size:110px;
-    color: hsl(0, 97%, 54%);
-};
+    color: hsl(0, 57%, 27%);
+}; */
+
+.title {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 30px;
+    font-family: Raleway;
+    font-size: 110px;
+    color: hsl(0, 57%, 27%);
+  }
 
 
 
