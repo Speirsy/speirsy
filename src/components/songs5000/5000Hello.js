@@ -1,7 +1,7 @@
 import React from 'react';
 import { getVideos } from '../../repository';
 import FIJLook from '../farinjim/FIJVideos';
-import { VideoList } from '../farinjim/FIJVideos';
+import VideoList from '../VideoList';
 
 const SongsHello = () => {
 
