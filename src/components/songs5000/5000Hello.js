@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { getVideos } from '../../repository';
-import FIJLook from '../farinjim/FIJVideos';
 import VideoList from '../VideoList';
 
 const SongsHello = () => {
 
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    getVideos().then((data) => setVideos(data));
+  }, []);
+
+
+  const fij5000Videos = videos.filter((video) => video.artist === 'fij_5000');
 
   return (
     <>
     <h1>Songs Hello</h1>
-    <VideoList videos={ speirsyVideos } />
+    <VideoList videos={ fij5000Videos } />
     </>
   );
 };
