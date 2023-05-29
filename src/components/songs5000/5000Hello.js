@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getVideos } from '../../repository';
 import VideoList from '../VideoList';
 
+
 const SongsHello = () => {
 
   const [videos, setVideos] = useState([]);
@@ -9,7 +10,6 @@ const SongsHello = () => {
   useEffect(() => {
     getVideos().then((data) => setVideos(data));
   }, []);
-
 
   const fij5000Videos = videos.filter((video) => video.artist === 'fij_5000');
 

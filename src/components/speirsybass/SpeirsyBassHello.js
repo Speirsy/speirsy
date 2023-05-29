@@ -10,12 +10,12 @@ const BassHello = () => {
     getVideos().then((data) => setVideos(data));
   }, []);
 
-  const speirsBlogVideos = videos.filter((video) => video.artist === 'speirsy_blog');
+  const speirsyBlogVideos = videos.filter((video) => video.artist === 'speirsy_blog');
 
   return (
     <>
     <h1>Bass Hello</h1>
-    <VideoList videos={ speirsBlogVideos } />
+    <VideoList videos={ speirsyBlogVideos } />
     </>
   );
 };

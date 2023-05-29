@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 const VideoList = ({ videos }) => (
   <ul>
     {videos.map((video) => (
