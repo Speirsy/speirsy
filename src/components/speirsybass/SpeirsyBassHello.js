@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getVideos } from '../../repository';
 import VideoList from '../VideoList';
+import BlogForm from '../BlogEntryForm';
 
 const BassHello = () => {
 
@@ -16,6 +17,7 @@ const BassHello = () => {
     <>
     <h1>Bass Hello</h1>
     <VideoList videos={ speirsyBlogVideos } />
+    <BlogForm />
     </>
   );
 };
