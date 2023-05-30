@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { db } from '../firebase.js'
+import { db } from '../firebase.js';
+
 
 
 const BlogForm = () => {
@@ -46,6 +47,8 @@ return (
     </form>
   );
 };
+
+console.log('DB object:', db);
 
 export default BlogForm;
 
