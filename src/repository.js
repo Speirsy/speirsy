@@ -21,9 +21,10 @@ const getVideos = async function(){
 
 export {getVideos};
 
-// const getSpeirsyVideos = async function(){
+// const getBassBlogs = async function(){
 //     try {
-//         const speirsyVideosRef = collection(db,'speirsyVideos');
+//         const BassBlogsRef = collection(db,'blog_speirsy');
+
 //         const speirsyVideosSnapshot = await getDocs(speirsyVideosRef);
 //         const speirsyVideos = speirsyVideosSnapshot.docs.map(d => d.data());
 
