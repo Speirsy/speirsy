@@ -21,18 +21,18 @@ const getVideos = async function(){
 
 export {getVideos};
 
-// const getBassBlogs = async function(){
-//     try {
-//         const BassBlogsRef = collection(db,'blog_speirsy');
+const getBassBlogs = async function(){
+    try {
+        const BassBlogsRef = collection(db,'blog_speirsy');
 
-//         const speirsyVideosSnapshot = await getDocs(speirsyVideosRef);
-//         const speirsyVideos = speirsyVideosSnapshot.docs.map(d => d.data());
+        const BassBlogsSnapshot = await getDocs(BassBlogsRef);
+        const BassBlogs = BassBlogsSnapshot.docs.map(d => d.data());
 
-//         return speirsyVideos
-//     }
-//     catch(err){
-//         alert(err.message);
-//     }
-// };
+        return BassBlogs
+    }
+    catch(err){
+        alert(err.message);
+    }
+};
 
-// export {getSpeirsyVideos};
+export {getBassBlogs};
