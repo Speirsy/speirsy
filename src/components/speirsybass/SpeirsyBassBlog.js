@@ -13,11 +13,11 @@ const BassBlog = () => {
 
   return (
     <>
-    <header>
+    <header>year
       <h1>Blogs</h1>
     </header>
     
-    {/* <SpeirsyBlogsList/> */}
+    <SpeirsyBlogsList blogs={blogs}/>
     </>
   );
 };
