@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { getBassBlogs} from '../../repository';
+import { getBlogs} from '../../BlogRepository';
 import SpeirsyBlogsList from '../SpeirsyBlogsList';
 
 const BassBlog = () => {
@@ -8,8 +8,9 @@ const BassBlog = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    getBassBlogs().then((data) => setBlogs(data));
+    getBlogs().then((data) => setBlogs(data));
   }, []);
+
 
   return (
     <>

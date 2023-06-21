@@ -1,3 +1,36 @@
+import React, { useState, useEffect } from 'react';
+import './FIJVideos.css';
+import { getVideos } from '../../repository';
+import VideoList from '../VideoList';
+
+
+
+const FIJLook = () => {
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    getVideos().then((data) => setVideos(data));
+  }, []);
+
+  const fijVideos = videos.filter((video) => video.artist === 'fij');
+  const speirsyVideos = videos.filter((video) => video.artist === 'speirsy');
+
+  return (
+    <>
+      <header>
+        <h1 className="videos-header">FIJ Videos</h1>
+      </header>
+      <VideoList videos={fijVideos} />
+      <title>Speirsy, Not Jim</title>
+      <div>Speirsy toons</div>
+      <VideoList videos={speirsyVideos} />
+    </>
+  );
+};
+
+
+
+export default FIJLook;
 
 // import React, {useState, useEffect} from 'react';
 // import './FIJVideos.css';
@@ -87,37 +120,5 @@
 // Using filter to split the videos into separate arrays based on their artist field.
 // Rendering the VideoList component twice, passing in the filtered arrays as props.
 
-import React, { useState, useEffect } from 'react';
-import './FIJVideos.css';
-import { getVideos } from '../../repository';
-import VideoList from '../VideoList';
 
-
-
-const FIJLook = () => {
-  const [videos, setVideos] = useState([]);
-
-  useEffect(() => {
-    getVideos().then((data) => setVideos(data));
-  }, []);
-
-  const fijVideos = videos.filter((video) => video.artist === 'fij');
-  const speirsyVideos = videos.filter((video) => video.artist === 'speirsy');
-
-  return (
-    <>
-      <header>
-        <h1 className="videos-header">FIJ Videos</h1>
-      </header>
-      <VideoList videos={fijVideos} />
-      <title>Speirsy, Not Jim</title>
-      <div>Speirsy toons</div>
-      <VideoList videos={speirsyVideos} />
-    </>
-  );
-};
-
-
-
-export default FIJLook;
 

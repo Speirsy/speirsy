@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const SpeirsyBlogsList = ({ blogs }) => (
     <ul>
       {blogs.map((blog, index) => (
