@@ -6,6 +6,7 @@ import { saveBlog } from '../BlogRepository.js';
 const BlogForm = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
+    id: '',
     title: '',
     content: '',
     author: '',
@@ -33,6 +34,10 @@ const BlogForm = () => {
 
 return (
     <form onSubmit={handleSubmit}>
+      <label>
+        Identity: 
+        <input type="text" name="id" value={formData.id} onChange={handleChange} />
+      </label>
       <label>
         Title:
         <input type="text" name="title" value={formData.title} onChange={handleChange} />

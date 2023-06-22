@@ -9,6 +9,7 @@ const SpeirsyBlogsList = ({ blogs }) => (
           <h3>{blog.author}</h3>
           <h4>{blog.title}</h4>
           <h4>{blog.content}</h4>
+          <h4>{blog.id}</h4>
           {/* <iframe
             width="400"
             height="285"
