@@ -16,8 +16,9 @@ const BassHello = () => {
   return (
     <>
     <h1>Bass Hello</h1>
+   <BlogForm />
     <VideoList videos={ speirsyBlogVideos } />
-    <BlogForm />
+
     </>
   );
 };

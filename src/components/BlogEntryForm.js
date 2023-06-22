@@ -24,7 +24,7 @@ const BlogForm = () => {
 
     try {
       await saveBlog(formData); // Save the blog data to the Firestore collection
-      navigate('/confirmation'); // Redirect after successful submission
+      navigate('./bassblog'); // Redirect after successful submission
 } catch (error) {
   // Handle error if submission fails
   console.log(error);

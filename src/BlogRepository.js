@@ -1,4 +1,4 @@
-import { collection, doc, getDocs, getDoc, setDoc, addDoc, deleteDoc } from "firebase/firestore";
+import { collection, doc, getDocs, getDoc, setDoc, addDoc, deleteDoc, updateDoc } from "firebase/firestore";
 import { db } from "./firebase";
 
 
@@ -37,22 +37,22 @@ export const getBlog = async function(id){
 }
 
 // Adds/updates a blog to the blogs collection
-export const saveBlog = async function(blog){
+// Adds/updates a blog to the blogs collection
+export const saveBlog = async function(blog) {
     try {
-        let docRef;
-        if (blog.id){
-            docRef = doc(db, blogsCollection, doc.id);
-            await setDoc(docRef, blog);  
-        }
-        else {
-            docRef = doc(db, blogsCollection);
-            await addDoc(docRef, blog);    
-        }   
+      let docRef;
+      if (blog.id) {
+        docRef = doc(db, `${blogsCollection}/${blog.id}`);
+        await setDoc(docRef, blog);
+      } else {
+        docRef = await addDoc(collection(db, blogsCollection), blog);
+        blog.id = docRef.id; // Assign the generated ID to the blog object
+        await updateDoc(docRef, blog); // Update the document with the assigned ID
+      }
+    } catch (err) {
+      console.error(err.message);
     }
-    catch(err){
-        console.error(err.message);
-    }
-}
+  };
 
 // Deletes a blog from the blogs collection
 export const deletePerson = async function(blog){
