@@ -4,13 +4,27 @@
 
 /* a {text-decoration: none;} */
 
+.start-animation {
+  animation: slideIn 2s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
 
 
 .start-nav {
     font-family: 'Impact', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display:flex;
     color: antiquewhite;
-    background-color: #fca315;
+    background-color: #0d0c0a;
     /* background-color: #d9d6d1; */
     min-height: 100vh;
     text-align:center ;
@@ -20,11 +34,22 @@
     font-size: calc(50px + 2vmin);
   }
 
+  .star {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
 .start-nav a {text-decoration: none;}
 
 .FIJ-banner-temp {
   display: flexbox;
-  content: url("start_images/FIJ_Rainbow_1.png");
+  /* content: url("start_images/FIJ_Rainbow_1.png"); */
   
 }
 .FIJ-banner-temp:hover {
