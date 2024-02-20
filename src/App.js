@@ -2,7 +2,7 @@ import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import Start from './Start';
-import FIJHome from './components/farinjim/FIJHome';
+import FIJMenu from './components/farinjim/FIJMenu';
 import FIJHello from './components/farinjim/FIJHello';
 import FIJLook from './components/farinjim/FIJVideos';
 import FIJAudio from './components/farinjim/FIJAudio';
@@ -25,7 +25,7 @@ function App() {
         <Routes>
           <Route index element={<Start />} />
             
-          <Route path="FaRiNjIm" element={<FIJHome/>} >
+          <Route path="FaRiNjIm" element={<FIJMenu/>} >
             <Route index element={<FIJHello />} />
 
             {/* I'm not really sure what's happening here with the index. Or why we need 2 home pages.

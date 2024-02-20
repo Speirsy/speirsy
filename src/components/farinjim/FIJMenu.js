@@ -3,7 +3,7 @@ import { Link, Outlet } from 'react-router-dom';
 import './FIJ.css';
 
 
-const FIJHome = () => {
+const FIJMenu = () => {
 
     return (
         <>
@@ -32,4 +32,4 @@ const FIJHome = () => {
     );
 };
 
-export default FIJHome;
+export default FIJMenu;

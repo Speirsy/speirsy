@@ -1,6 +1,10 @@
 import React from 'react';
 import './FIJ.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './EthereumPrice';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
+import {ethereumPrice} from './EthereumPrice';
+
 
 const FIJHello = () => {
 
@@ -14,7 +18,12 @@ const FIJHello = () => {
         <div className="title">Far In Jim
         </div> 
       </header>
+
+      <h1>Ethereum Price: ${ethereumPrice}</h1>
+          <h1>$5000 is equivalent to {(5000/ethereumPrice).toFixed(5)} Ethereum</h1>
+
     <section>
+    
       {/* see how flexbox classes are assigned. see web dev simplified flexbox in 15 minutes */}
       <div className="flexbox-container"> 
         <p className="flexbox-item flexbox-item-1">
