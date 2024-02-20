@@ -1,9 +1,8 @@
 import React from 'react';
 import './FIJ.css';
-import './EthereumPrice';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
-import {ethereumPrice} from './EthereumPrice';
+import EthereumPrice from './EthereumPrice';
 
 
 const FIJHello = () => {
@@ -12,19 +11,17 @@ const FIJHello = () => {
     <>
     
    
-      <div className="main-image">
+      {/* <div className="main-image">
         
       <header> 
         <div className="title">Far In Jim
         </div> 
       </header>
 
-      <h1>Ethereum Price: ${ethereumPrice}</h1>
-          <h1>$5000 is equivalent to {(5000/ethereumPrice).toFixed(5)} Ethereum</h1>
-
-    <section>
-    
-      {/* see how flexbox classes are assigned. see web dev simplified flexbox in 15 minutes */}
+   
+    <section> */}
+      <EthereumPrice />
+      {/* see how flexbox classes are assigned. see web dev simplified flexbox in 15 minutes
       <div className="flexbox-container"> 
         <p className="flexbox-item flexbox-item-1">
 
@@ -36,7 +33,7 @@ const FIJHello = () => {
         I got paid actual money to write "Sports Personality" and that's called a commision. My mum borrowed the money though and never paid me back. She says "Dear Santa" is ok but only cause she gets a mention in it. I don't think she's even listened to any of the others. 
         But I don't care what she thinks anymore. I'm going to keep doing it anyway.  */}
 
-        </p>
+        {/* </p>
 
       </div>
     </section>
@@ -46,7 +43,7 @@ const FIJHello = () => {
 
       </h3>
         
-    </footer>
+    </footer> */} 
     
     </>
   );

@@ -10,8 +10,8 @@ function EthereumPrice() {
         const response = await axios.get(
           'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd'
         );
-        if (response){
-        setEthereumPrice(response.data.ethereum.usd)
+        if (response && response.data && response.data.ethereum && response.data.ethereum.usd) {
+          setEthereumPrice(response.data.ethereum.usd)
       };
 
       console.log('The response to the psalm is:');
@@ -34,6 +34,18 @@ function EthereumPrice() {
     return () => clearInterval(intervalId);
   }, []);
 
-}
+  return (
 
-export default EthereumPrice;
+  <>
+
+  <h1>Ethereum Price: ${ethereumPrice}</h1>
+  <h1>$5000 is equivalent to {(5000/ethereumPrice).toFixed(5)} Ethereum</h1>
+
+  </>)
+};
+
+// export const ethereumPrice = EthereumPrice(); // Export the variable
+
+export default EthereumPrice; // Export the component
+
+
