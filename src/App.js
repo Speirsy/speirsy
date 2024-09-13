@@ -16,6 +16,7 @@ import BassHome from './components/speirsybass/SpeirsyBassHome';
 import BassHello from './components/speirsybass/SpeirsyBassHello';
 import BassBlog from './components/speirsybass/SpeirsyBassBlog';
 import BassTherapist from './components/speirsybass/SpeirsyBassTherapist';
+import BlogDetails from './components/speirsybass/BlogDetails';
 
 
 
@@ -48,6 +49,7 @@ function App() {
           <Route path="speirsybass" element={<BassHome  />} >
             <Route index element={<BassHello />} />
             <Route path="bassblog" element={<BassBlog />} />
+            <Route path="bassblog/:slug" element={<BlogDetails />} />
             <Route path="therapy" element={<BassTherapist />} />
           </Route>
         </Routes>

@@ -1,45 +1,34 @@
 import React, { useState, useEffect } from "react";
-import { getBlogs } from "../BlogRepository";
+import { Link } from "react-router-dom";
+import { slugify } from "../../utils/slugify";
 
-const SpeirsyBlogsList = () => {
-  const [blogs, setBlogs] = useState([]);
-  const [visibleBlogs, setVisibleBlogs] = useState([]); // Blogs currently visible
-  const [hasMore, setHasMore] = useState(true); // To check if more blogs are available
-  const [limit, setLimit] = useState(5); // Number of blogs to show initially
-  const [expandedBlogIndex, setExpandedBlogIndex] = useState(0); // Default to latest blog (index 0)
+const SpeirsyBlogsList = ({ blogs }) => {
+  const [visibleBlogs, setVisibleBlogs] = useState(5); // Number of blogs to show initially
+  const [expandedBlogs, setExpandedBlogs] = useState([0]); // Top blog expanded by default
+  const [hasMore, setHasMore] = useState(false); // To check if more blogs are available
 
-  // Fetch and set blogs on component mount
+  // Update `hasMore` whenever `blogs` or `visibleBlogs` change
   useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        const allBlogs = await getBlogs(); // Fetch all blogs
-        const sortedBlogs = allBlogs.sort((a, b) => b.timestamp - a.timestamp); // Sort by timestamp
-        setBlogs(sortedBlogs);
-        setVisibleBlogs(sortedBlogs.slice(0, limit)); // Set initial visible blogs
-        setHasMore(sortedBlogs.length > limit); // Check if there are more blogs
-      } catch (error) {
-        console.error("Error fetching blogs:", error);
-      }
-    };
-
-    fetchBlogs();
-  }, [limit]);
+    setHasMore(blogs.length > visibleBlogs);
+  }, [blogs, visibleBlogs]);
 
   // Function to load more blogs
   const loadMoreBlogs = () => {
-    const nextLimit = limit + 5; // Increment the limit
-    setLimit(nextLimit);
-    setVisibleBlogs(blogs.slice(0, nextLimit)); // Update visible blogs
-    setHasMore(blogs.length > nextLimit); // Update hasMore state
+    setVisibleBlogs((prev) => prev + 5);
   };
 
   // Function to handle expand/collapse for individual blogs
   const toggleExpandBlog = (index) => {
-    setExpandedBlogIndex(expandedBlogIndex === index ? null : index); // Toggle the clicked blog
+    setExpandedBlogs((prevExpanded) =>
+      prevExpanded.includes(index)
+        ? prevExpanded.filter((i) => i !== index) // Remove index to collapse
+        : [...prevExpanded, index] // Add index to expand
+    );
   };
 
   const getYouTubeEmbedUrl = (mediaUrl) => {
-    const youtubeRegex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+    const youtubeRegex =
+      /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
     const match = mediaUrl.match(youtubeRegex);
     if (match && match[1]) {
       return `https://www.youtube.com/embed/${match[1]}`;
@@ -67,7 +56,13 @@ const SpeirsyBlogsList = () => {
     }
 
     if (mediaUrl.match(/\.(jpeg|jpg|gif|png)$/)) {
-      return <img src={mediaUrl} alt="blog media" style={{ maxWidth: "100%", height: "auto" }} />;
+      return (
+        <img
+          src={mediaUrl}
+          alt="blog media"
+          style={{ maxWidth: "100%", height: "auto" }}
+        />
+      );
     }
 
     if (mediaUrl.match(/\.(mp4|webm|ogg)$/)) {
@@ -98,19 +93,22 @@ const SpeirsyBlogsList = () => {
   return (
     <div>
       <ul>
-        {visibleBlogs.map((blog, index) => (
-          <li key={index} style={{ marginBottom: "20px" }}>
+        {blogs.slice(0, visibleBlogs).map((blog, index) => (
+          <li key={blog.id} style={{ marginBottom: "20px" }}>
             <h2
               onClick={() => toggleExpandBlog(index)}
-              style={{ cursor: "pointer", color: expandedBlogIndex === index ? "blue" : "black" }}
+              style={{
+                cursor: "pointer",
+                color: expandedBlogs.includes(index) ? "blue" : "black",
+              }}
             >
-              {blog.title}
+              <Link to={`/speirsybass/bassblog/${blog.slug}`}>{blog.title}</Link>
             </h2>
 
-            {/* If it's the latest blog (index 0) or expanded, show full content */}
-            {expandedBlogIndex === index || index === 0 ? (
+            {/* If the blog is expanded, show full content */}
+            {expandedBlogs.includes(index) ? (
               <>
-                <h4>{blog.content}</h4>
+                <p>{blog.content}</p>
                 {renderMedia(blog.mediaUrl)}
               </>
             ) : (
@@ -118,21 +116,23 @@ const SpeirsyBlogsList = () => {
             )}
 
             <button onClick={() => toggleExpandBlog(index)}>
-              {expandedBlogIndex === index ? "Collapse" : "Read More"}
+              {expandedBlogs.includes(index) ? "Collapse" : "Read More"}
             </button>
           </li>
         ))}
       </ul>
 
       {/* Show "More Blogs" button if there are more blogs to load */}
-      {hasMore && (
-        <button onClick={loadMoreBlogs}>More Blogs</button>
-      )}
+      {hasMore && <button onClick={loadMoreBlogs}>More Blogs</button>}
     </div>
   );
 };
 
 export default SpeirsyBlogsList;
+
+
+
+
 
 
 

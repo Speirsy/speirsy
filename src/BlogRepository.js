@@ -1,13 +1,52 @@
-import { collection, doc, getDocs, getDoc, setDoc, addDoc, deleteDoc, serverTimestamp, orderBy, query } from "firebase/firestore";
+import { collection, doc, getDocs, getDoc, setDoc, addDoc, serverTimestamp, orderBy, query, where, limit } from "firebase/firestore";
 import { db } from "./firebase"; // Ensure correct path to Firebase config
 
 const blogsCollection = 'blog_speirsy';
 const blogsRef = collection(db, blogsCollection);
 
+export const getBlogBySlug = async function(slug) {
+  try {
+    const blogsQuery = query(blogsRef, where('slug', '==', slug), limit(1));
+    const querySnapshot = await getDocs(blogsQuery);
+
+    if (!querySnapshot.empty) {
+      const docSnapshot = querySnapshot.docs[0];
+      const blogData = docSnapshot.data();
+      blogData.id = docSnapshot.id;
+      return blogData;
+    } else {
+      console.error(`No blog found with slug: ${slug}`);
+      return null;
+    }
+  } catch (err) {
+    console.error('Error fetching blog by slug:', err.message);
+    throw err;
+  }
+};
+
+// Function to get a single blog by its ID from the 'blog_speirsy' collection
+export const getBlog = async function(id) {
+    try {
+        const docRef = doc(db, blogsCollection, id);
+        const docSnapshot = await getDoc(docRef);
+
+        if (docSnapshot.exists()) {
+            const blogData = docSnapshot.data();
+            blogData.id = docSnapshot.id; // Include the ID in the returned data
+            return blogData;
+        } else {
+            console.error(`No blog found with ID: ${id}`);
+            return null;
+        }
+    } catch (err) {
+        console.error("Error fetching blog by ID:", err.message);
+        throw err; // Propagate the error to handle it in the calling function
+    }
+};
+
 // Function to get a list of all blogs, ordered by timestamp in descending order
 export const getBlogs = async function() {
     try {
-        // Query Firestore to order blogs by timestamp, with latest first
         const blogsQuery = query(blogsRef, orderBy('timestamp', 'desc'));
         const blogsSnapshot = await getDocs(blogsQuery);
         
@@ -30,20 +69,23 @@ export const saveBlog = async function(blog) {
     try {
         let docRef;
 
+        // Add or update the timestamp in the blog object
         const blogWithTimestamp = {
             ...blog,
             timestamp: serverTimestamp() // Ensure the timestamp is set properly
         };
 
-        // If the blog has an ID, update the existing document
+        // If the blog has an ID, it's an update, so use the existing document ID
         if (blog.id) {
             docRef = doc(db, blogsCollection, blog.id);
             await setDoc(docRef, blogWithTimestamp); // Update the document
         } else {
-            // If no ID, add a new blog and let Firestore generate the ID
-            docRef = await addDoc(blogsRef, blogWithTimestamp);
+            // If no ID, use the slug as the document ID for new blogs
+            docRef = doc(blogsRef, blog.slug);
+            await setDoc(docRef, blogWithTimestamp);
         }
 
+        // Return the saved blog with the document ID
         return { ...blogWithTimestamp, id: docRef.id };
     } catch (err) {
         console.error("Error saving blog:", err.message);

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { saveBlog } from '../BlogRepository'; // Ensure correct path to BlogRepository
+import { saveBlog, getBlogBySlug } from '../../BlogRepository'; // Ensure correct path to BlogRepository
+import { slugify } from '../../utils/slugify';
 
 const BlogForm = () => {
-  const navigate = useNavigate(); // Initialize the navigation hook
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     title: '',
     content: '',
@@ -20,14 +21,28 @@ const BlogForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    // Generate a slug from the title
+    let slug = slugify(formData.title);
+
     try {
+      // Check if a blog with the same slug already exists
+      const existingBlog = await getBlogBySlug(slug);
+
+      // If the slug already exists, append a unique identifier (e.g., a timestamp or random string)
+      if (existingBlog) {
+        slug = `${slug}-${Date.now()}`; // Append timestamp for uniqueness
+      }
+
+      // Add the slug to the form data
+      const newBlog = { ...formData, slug };
+
       // Save the blog to Firestore
-      const savedBlog = await saveBlog(formData);
+      const savedBlog = await saveBlog(newBlog);
 
       console.log('Blog saved successfully:', savedBlog); // Debugging
 
       // Redirect to the main blog list page or specific blog details page
-      navigate('/speirsybass/bassblog'); // Change this to `/bassblog/${savedBlog.id}` if you want to redirect to the details page
+      navigate(`/speirsybass/bassblog/${savedBlog.slug}`); // Redirect to the details page using the slug
     } catch (error) {
       console.error("Error saving blog:", error); // Detailed error handling
     }
@@ -57,5 +72,6 @@ const BlogForm = () => {
 };
 
 export default BlogForm;
+
 
 

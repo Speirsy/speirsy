@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getBlogs } from '../../BlogRepository'; // Correct path to BlogRepository
-import BlogForm from '../BlogEntryForm';
-import SpeirsyBlogsList from '../SpeirsyBlogsList';
+import BlogForm from './BlogEntryForm';
+import SpeirsyBlogsList from './SpeirsyBlogsList';
 
 const BassBlog = () => {
   const [blogs, setBlogs] = useState([]);
