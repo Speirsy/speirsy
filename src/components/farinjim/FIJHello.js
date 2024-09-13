@@ -3,6 +3,7 @@ import './FIJ.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 import EthereumPrice from './EthereumPrice';
+import VideoList from '../VideoList';
 
 
 const FIJHello = () => {
@@ -21,6 +22,8 @@ const FIJHello = () => {
    
     <section> */}
       <EthereumPrice />
+      {/* <VideoList videos={speirsyVideos} /> */}
+      
       {/* see how flexbox classes are assigned. see web dev simplified flexbox in 15 minutes
       <div className="flexbox-container"> 
         <p className="flexbox-item flexbox-item-1">

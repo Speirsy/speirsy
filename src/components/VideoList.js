@@ -1,3 +1,4 @@
+// VideoList.js is a functional component that takes a prop called videos, which is an array of video objects. 
 import React from 'react';
 
 const VideoList = ({ videos }) => (

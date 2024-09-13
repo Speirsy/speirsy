@@ -25,9 +25,7 @@ function EthereumPrice() {
     // Fetch Ethereum price on component mount
     fetchEthereumPrice();
 
-
-
-    // Set up a timer to fetch the price at regular intervals (e.g., every minute)
+    // Set up a timer to fetch the price at regular intervals (e.g., every half minute)
     const intervalId = setInterval(() => fetchEthereumPrice(), 30000);
 
     // Clean up the interval on component unmount
@@ -35,7 +33,6 @@ function EthereumPrice() {
   }, []);
 
   return (
-
   <>
 
   <h1>Ethereum Price: ${ethereumPrice}</h1>

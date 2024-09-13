@@ -1,61 +1,60 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { db } from '../firebase.js';
-import { saveBlog } from '../BlogRepository.js';
+import { saveBlog } from '../BlogRepository'; // Ensure correct path to BlogRepository
 
 const BlogForm = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Initialize the navigation hook
   const [formData, setFormData] = useState({
-    id: '',
     title: '',
     content: '',
     author: '',
+    mediaUrl: ''
   });
 
+  // Handle form field changes
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
-    console.log (handleChange)
-    console.log (formData)
 
+  // Handle form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    console.log (handleSubmit)
-
     try {
-      await saveBlog(formData); // Save the blog data to the Firestore collection
-      navigate('./bassblog'); // Redirect after successful submission
-} catch (error) {
-  // Handle error if submission fails
-  console.log(error);
-}
-};
+      // Save the blog to Firestore
+      const savedBlog = await saveBlog(formData);
 
-return (
+      console.log('Blog saved successfully:', savedBlog); // Debugging
+
+      // Redirect to the main blog list page or specific blog details page
+      navigate('/speirsybass/bassblog'); // Change this to `/bassblog/${savedBlog.id}` if you want to redirect to the details page
+    } catch (error) {
+      console.error("Error saving blog:", error); // Detailed error handling
+    }
+  };
+
+  return (
     <form onSubmit={handleSubmit}>
       <label>
-        Identity: 
-        <input type="text" name="id" value={formData.id} onChange={handleChange} />
-      </label>
-      <label>
         Title:
-        <input type="text" name="title" value={formData.title} onChange={handleChange} />
+        <input type="text" name="title" value={formData.title} onChange={handleChange} required />
       </label>
       <label>
         Content:
-        <textarea name="content" value={formData.content} onChange={handleChange} />
+        <textarea name="content" value={formData.content} onChange={handleChange} required />
       </label>
       <label>
         Author:
-        <input type="text" name="author" value={formData.author} onChange={handleChange} />
+        <input type="text" name="author" value={formData.author} onChange={handleChange} required />
+      </label>
+      <label>
+        Media URL (Image/Video):
+        <input type="text" name="mediaUrl" value={formData.mediaUrl} onChange={handleChange} />
       </label>
       <button type="submit">Submit</button>
     </form>
   );
 };
-
-console.log('DB object:', db);
 
 export default BlogForm;
 
